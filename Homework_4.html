@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1) Ask user to Enter the start value and end value from the user  and print all the even and odd number in between them
+        let startvalue= prompt("Enter the start value");
+        let endvalue = prompt("Enter the end value");
+        function printevenandodd(start,end){
+            console.log("Even number");
+            for(let i=start; i<=end; i++){
+
+            if(i%2===0){
+                console.log(i);
+            }
+
+
+        }
+            console.log("odd number");
+            for (let i=start; i<=end ; i++){
+            if(i%2!==0){
+                console.log(i);
+            }
+            }
+    }
+            printevenandodd(startvalue,endvalue);
+
+        //  Ask user to enter the choice like 1 for Say Hello, 2 to take 2 numbers and add them 3 for say good bye , 4 for push in the array (user name : static or dynamic)and for all other inputs, displays an alert that "Invalid Input"Note: Use Switch Statement and Functions init .
+        function sayHello(){
+            console.log("Hello");
+        }
+
+        function addNumbers() {
+            let num1 = parseInt(prompt("Enter the first number"));
+            let num2 = parseInt(prompt("Enter the second number"));
+            console.log("The Sum is " + (num1 + num2));
+        }
+
+        function endingGreeting(){
+            console.log("Goodbye");
+        }
+
+        function pus(){
+            let names = ["Ali", "Ahmad", "Ahsan", "Anwar", "Akram"];
+            let username = prompt("Enter your name");
+            names.push(username);
+            console.log(names);
+        }
+
+        function inv(){
+            alert("Invalid input");
+        }
+
+        function initration(){
+            const choice = prompt("Enter your choice: 1 for Say Hello / 2 to Add Two Numbers / 3 to Say Goodbye / 4 to Push in an Array / Any other input for Invalid");
+            switch(choice){
+                case '1':
+                    sayHello();
+                    break;
+                case '2':
+                    addNumbers();
+                    break;
+                case '3':
+                    endingGreeting();
+                    break;
+                case '4':
+                    pus();
+                    break;
+                default:
+                    inv();
+                    break;
+            }
+        }
+
+        initration();
+
+        //Design an example of array push, pop, Lengthlike run a loop from 1 to 50 , push each value to array if array length >=20 break the loop
+        // Initialize an empty array
+        let arr=[];
+
+for(i=1;i<=50;i++){
+
+arr.push(i);
+if(arr.length>=20){
+    break;
+}
+
+}
+console.log(arr);
+console.log("Length of the Array is: "+ arr.length);
+let name = ["Ali" , "Akram" , "Hamza" , "Hania" ,"Hina" , "shariaz"]
+name.pop();
+console.log(name);
+    </script>
+</body>
+</html>
